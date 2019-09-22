@@ -1,0 +1,39 @@
+import java.util.Scanner;
+import java.math.BigDecimal;
+
+public class InterestCalculatorApp {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Welcome to the Interest Calculator!");
+		System.out.println();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String choice = "y";
+		while (choice.equalsIgnoreCase("y")) {
+			
+		// double loanAmount, interestRate, interest = 0.0;		Brytt did it this way, can put them in our outside of while loop
+			
+			System.out.print("Enter Loan Amount: ");
+			double loanAmount = sc.nextDouble();
+							//BigDecimal loanAmount = sc.nextBigDecimal();
+							//BigDecimal loanAmount = new BigDecimal(sc.next());
+							
+			
+			System.out.print("Enter Interest Rate: ");
+			BigDecimal interestRate = new BigDecimal(sc.next());
+			
+			
+			
+			
+			System.out.print("Continue? (y/n): ");
+            choice = sc.next();
+            System.out.println();
+			
+		}
+		sc.close();
+
+	}
+
+}

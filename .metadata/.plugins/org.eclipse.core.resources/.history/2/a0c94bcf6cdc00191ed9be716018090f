@@ -1,0 +1,46 @@
+import java.util.Scanner;
+import java.math.BigDecimal;
+import java.text.NumberFormat;
+
+public class InterestCalculatorApp {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Welcome to the Interest Calculator!");
+		System.out.println();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String choice = "y";
+		while (choice.equalsIgnoreCase("y")) {
+			double loanAmount, interestRate, interest = 0.0;			
+			
+			System.out.print("Enter Loan Amount: ");
+			loanAmount = sc.nextDouble();
+							
+			System.out.print("Enter Interest Rate: ");
+			interestRate = sc.nextDouble();
+			// or BigDecimal interestRate = new BigDecimal(sc.next());
+			
+			BigDecimal loanAmountBD = new BigDecimal(loanAmount);
+			BigDecimal interestRateDB = new BigDecimal(interestRate);
+			
+			interest = loanAmountBD.multiply(interestRateDB).doubleValue();
+			
+			NumberFormat currency = NumberFormat.getCurrencyInstance();
+			NumberFormat percent = NumberFormat.getPercentInstance();
+			
+			currency.setMaximumFractionDigits(2);
+			percent.setMaximumFractionDigits(3);
+			
+			
+			System.out.print("Continue? (y/n): ");
+            choice = sc.next();
+            System.out.println();
+			
+		}
+		sc.close();
+
+	}
+
+}

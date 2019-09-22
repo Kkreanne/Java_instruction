@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class PrintWorldApp {
+
+	public static void main(String[] args) {
+		System.out.println("Hello, Welcome to the Console Demo App!");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter a whole number: ");
+		int number1 = sc.nextInt();
+		System.out.println("Enter another whole number: ");
+		int number2 = sc.nextInt();
+		
+		int sum = number1 + number2;
+		
+		System.out.println("Your total is: " + sum);
+		System.out.println("Thanks for stopping by!");
+		
+		sc.close();
+	}
+
+}
