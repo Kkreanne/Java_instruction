@@ -10,16 +10,19 @@ public class FactorialCalculatorApp {
 		
 		String choice = "y";
 		
+		int count;
+		int fact = 1;
+		
 		while (choice.equalsIgnoreCase("y")) {
 			System.out.println("Enter an integer that is greater than 0 AND less than 10: ");
-			int n = sc.nextInt();
+			count = sc.nextInt();
+			sc.nextLine();
 			
-			//long o = (n*!);
-			for (int i=1; i<n; i++) {
-				System.out.println("The factorial of " + n + "is " + (n!) + ".");
+			for (int i=1; i<=count; i++) {
+				fact *=i;
 			}
 			
-			
+			System.out.println("The factorial of " + count + " is " + fact + ".");			
 			
 			System.out.println("Continue??");
 			choice = sc.next();

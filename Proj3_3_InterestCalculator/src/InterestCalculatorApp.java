@@ -20,7 +20,6 @@ public class InterestCalculatorApp {
 							
 			System.out.print("Enter Interest Rate: ");
 			interestRate = sc.nextDouble();
-			// or BigDecimal interestRate = new BigDecimal(sc.next());
 			
 			BigDecimal loanAmountBD = new BigDecimal(loanAmount);
 			BigDecimal interestRateDB = new BigDecimal(interestRate);
